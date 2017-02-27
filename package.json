@@ -1,0 +1,24 @@
+{
+  "name": "spottybotty",
+  "version": "0.0.1",
+  "description": "Spotify Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danieldylan1/SpottyBotty.git"
+  },
+  "author": "Danieldylan1 (Jason Liu)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danieldylan1/SpottyBotty/issues"
+  },
+  "homepage": "https://github.com/Danieldylan1/SpottyBotty#readme",
+  "dependencies": {
+    "discord.js": "^11.0.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
