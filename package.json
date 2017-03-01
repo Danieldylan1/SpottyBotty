@@ -19,6 +19,10 @@
   "dependencies": {
     "discord.js": "^11.0.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "promise": "^7.1.1",
+    "spotify-web-api-node": "^2.3.6",
+    "superagent": "^3.5.0",
+    "uws": "^0.13.0"
   }
 }

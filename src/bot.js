@@ -6,10 +6,14 @@ __license__ = "Do what you wish"
 const Discord = require('discord.js');
 const fs = require('fs');
 const path = require('path');
+const SpotifyWebApi = require('spotify-web-api-node');
 
 //Variables
 let pf = "s!";
 let msgArray = message.content.split(' ')
+let infoNotify = "**:notepad_spiral: INFO >> ** "
+let warningNotify = "**:warning:** WARN >> "
+let musicNotify = "**:musical_note: MUSIC >> **"
 
 //Load Files
 try {
@@ -19,6 +23,10 @@ try {
 }
 //Construct Objects
 const bot = new Discord.Client();
+const spotifyApi = new SpotifyWebApi({
+  clientId = 'c3cc24ea4ebc47c3bbf710025522832d',
+  clientSecret = '6c639c13712e488f8538d16ace5e07a1'
+});
 
 //Init Bot
 bot.login(cfg.token);
@@ -39,6 +47,11 @@ bot.on('message', (msg) => {
   //Bot Variables
   let mchannel = msg.channel;
   let member = msg.member;
-  let cmd = msgArray[0].split(1, msgArray[0].length).toUpperCase()
-  let arg = msgArray.slice(1, msgArray.length)
+  let cmd = msgArray[0].split(pf.length, msgArray[0].length).toUpperCase()
+  let args = msgArray.slice(1, msgArray.length)
+
+  //Test Command
+  if(cmd == "DING") {
+    mchannel.sendMessage(infoNotify + "Dongalog!")
+  }
 });
